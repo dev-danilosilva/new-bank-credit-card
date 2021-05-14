@@ -1,6 +1,6 @@
 # new-bank-credit-card
 
-FIXME: description
+Clojure and functional programming exercise
 
 ## Installation
 
