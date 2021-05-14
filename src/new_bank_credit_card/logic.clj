@@ -35,10 +35,10 @@
 (defn create-new-operation
   [card operation category value currency]
   (let [approval-fn (op-validation-function  [[>= (:total-limit card) value]
-                                               [(comp not empty?) value]
-                                               [(comp not nil?) currency]
-                                               [(comp not nil?  card)]
-                                               [(comp not nil?) operation]])
+                                              [(comp not nil?) value]
+                                              [(comp not nil?) currency]
+                                              [(comp not nil?  card)]
+                                              [(comp not nil?) operation]])
         op-status (operation-approval approval-fn)]
     {:timestamp nil
      :status op-status
