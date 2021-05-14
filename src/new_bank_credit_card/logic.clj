@@ -25,10 +25,10 @@
   (fn [] (->> (map (fn [validation] (apply (first validation) (rest validation))))
               (reduce and))))
 
-(defn operation-aproval
+(defn operation-approval
   [validation-fn]
   (if (validation-fn)
-    :aproved
+    :approved
     :denied
     ))
 
@@ -38,5 +38,12 @@
                                                [(comp not empty?) value]
                                                [(comp not nil?) currency]
                                                [(comp not nil?  card)]
-                                               [(comp not nil?) operation]])]
-    (operation-aproval approval-fn)))
+                                               [(comp not nil?) operation]])
+        op-status (operation-approval approval-fn)]
+    {:timestamp nil
+     :status op-status
+     :operation operation
+     :category category
+     :value  value
+     :currency currency
+     :card-uuid (:uuid card)}))

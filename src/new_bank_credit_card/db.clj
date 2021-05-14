@@ -58,7 +58,7 @@
 
 (def operation1
   {:timestamp nil
-   :status :aproved
+   :status :approved
    :operation :purchase
    :category :food
    :value  -23
@@ -67,7 +67,7 @@
 
 (def operation2
   {:timestamp nil
-   :status :aproved
+   :status :approved
    :operation :chargeback
    :category nil
    :value 300
@@ -76,7 +76,7 @@
 
 (def operation3
   {:timestamp nil
-   :status :aproved
+   :status :approved
    :operation :purchase
    :category :eletronic
    :value -200
@@ -85,7 +85,7 @@
 
 (def operation4
   {:timestamp nil
-   :status :aproved
+   :status :approved
    :operation :bill-payment
    :category nil
    :value 300
@@ -94,7 +94,7 @@
 
 (def operation5
   {:timestamp nil
-   :status :aproved
+   :status :approved
    :opereation :bill-payment
    :category nil
    :value 3000
@@ -103,7 +103,7 @@
 
 (def operation6
   {:timestamp nil
-   :status :aproved
+   :status :approved
    :opereation :purchase
    :category :food
    :value 500
